@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MvvmTraining</string>
+    <string name="register"><u>Didn\'t have an account? Register now!</u></string>
+</resources>
