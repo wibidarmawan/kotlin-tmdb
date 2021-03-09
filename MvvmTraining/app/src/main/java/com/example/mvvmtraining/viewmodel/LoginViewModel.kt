@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.mvvmtraining.api.RetrofitInstance
 import com.example.mvvmtraining.model.LoginResponseModel
+import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -36,13 +37,13 @@ class LoginViewModel: ViewModel() {
             }))
     }
 
-    fun validate (field: String, layout: TextInputLayout): Boolean{
-        if (field.isEmpty()){
-            layout.setErrorEnabled(true)
-            layout.setError("Email Can't Be Empty")
+    fun validate (editText: TextInputLayout): Boolean{
+        if (editText.editText?.text.toString().isEmpty()){
+            editText.setErrorEnabled(true)
+            editText.setError("Email Can't Be Empty")
             return false
         } else{
-            layout.setErrorEnabled(false)
+            editText.setErrorEnabled(false)
             return true
         }
     }

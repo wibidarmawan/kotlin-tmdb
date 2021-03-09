@@ -17,12 +17,11 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/til_email"
+            android:id="@+id/et_email"
             android:layout_marginBottom="10dp"
             app:errorEnabled="false">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email" />
@@ -32,12 +31,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:passwordToggleEnabled="true"
-            android:id="@+id/til_password"
+            android:id="@+id/et_password"
             android:layout_marginBottom="10dp"
             app:errorEnabled="false">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"

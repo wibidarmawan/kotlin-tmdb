@@ -21,9 +21,9 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         btn_login.setOnClickListener{
-            if (loginViewModel.validate(et_email.text.toString(), til_email)
-                    && loginViewModel.validate(et_password.text.toString(), til_password)){
-                loginViewModel.login(et_email.text.toString(), et_password.text.toString())
+            if (loginViewModel.validate(et_email)
+                    && loginViewModel.validate(et_password)){
+                loginViewModel.login(et_email.editText?.text.toString(), et_password.editText?.text.toString())
             }
         }
 
