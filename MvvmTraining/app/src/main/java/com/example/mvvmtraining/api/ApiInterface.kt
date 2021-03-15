@@ -1,10 +1,12 @@
 package com.example.mvvmtraining.api
 
 import com.example.mvvmtraining.model.LoginResponseModel
+import io.reactivex.Observable
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Query
+import java.util.*
 
 interface ApiInterface {
 
@@ -18,4 +20,7 @@ interface ApiInterface {
                  @Query("dob") dob: String,
                  @Query("address") address: String,
                  @Query("password") password: String): Single<LoginResponseModel>
+
+    @GET("email/all")
+    fun getEmail(): Observable<List<String>>
 }

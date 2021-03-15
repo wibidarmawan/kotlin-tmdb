@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,50 +8,98 @@
     tools:context=".view.RegisterActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/et_email_register"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:hint="Email" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_email_register"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:hint="Email"
+            app:boxBackgroundMode="outline"
+            app:errorEnabled="false">
 
-        <EditText
-            android:id="@+id/et_name_register"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:hint="Name" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_email_register"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/et_dob_register"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:hint="Date of Birth" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_name_register"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:hint="Name"
+            app:boxBackgroundMode="outline">
 
-        <EditText
-            android:id="@+id/et_address_register"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:hint="Address" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_name_register"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/et_password_register"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_dob_register"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:hint="Date of Birth"
+            app:boxBackgroundMode="outline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_dob_register"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_address_register"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:hint="Address"
+            app:boxBackgroundMode="outline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_address_register"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_password_register"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
             android:hint="Password"
-            android:inputType="textPassword" />
+            app:boxBackgroundMode="outline"
+            app:errorEnabled="false"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password_register"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/btn_register"
             android:layout_width="150dp"
-            android:layout_marginTop="10dp"
             android:layout_height="60dp"
-            android:textColor="@color/black"
-            android:text="REGISTER" />
+            android:layout_marginTop="10dp"
+            android:text="REGISTER"
+            android:textColor="@color/black" />
     </LinearLayout>
 
 </RelativeLayout>

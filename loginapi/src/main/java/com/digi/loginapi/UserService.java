@@ -6,6 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class UserService {
 	private UserRepository userRepository;
@@ -55,4 +58,9 @@ public class UserService {
 	public Iterable<UserModel> getAllUser(){
 		return userRepository.findAll();
 	}
+	
+	public List<String> getEmail(){
+		return userRepository.getEmail();
+	}
+	
 }

@@ -1,5 +1,6 @@
 package com.digi.loginapi;
 
+import java.util.List;
 import java.util.Objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,5 +52,10 @@ public class FirstController {
 	@GetMapping("/user/all")
 	public Iterable<UserModel> getAllUser(){
 		return userService.getAllUser();
+	}
+	
+	@GetMapping("/email/all")
+	public List<String> getAllEmail(){
+		return userService.getEmail();
 	}
 }
